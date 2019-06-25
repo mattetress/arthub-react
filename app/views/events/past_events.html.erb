@@ -1,0 +1,9 @@
+<h1>Past Events</h1>
+
+<%= link_to "Upcoming Events", events_path %>
+
+<% if @events.any? %>
+  <%= render "table", :events => @events %>
+<% else %>
+  <p>There are no past events.</p>
+<% end %>

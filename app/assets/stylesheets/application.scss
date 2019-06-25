@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require events
+ */
+ @import "artworks", "comments", "events", "sessions", "static", "users";
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Lobster');
+
+ html, body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+div#event_buttons {
+    position: absolute;
+    top: 124px;
+    right: 213px;
+}
+
+body:after{
+  content:"";
+  position:fixed; /* stretch a fixed position to the whole screen */
+  top:0;
+  min-height:100vh; /* fix for mobile browser address bar appearing disappearing */
+  width: 100%;
+  left:0;
+  right:0;
+  z-index:-1; /* needed to keep in the background */
+  background: asset_url("steve-johnson-1133776-unsplash.jpg") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  // background-color: gray;
+  // border: 2px solid green;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.fill {
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+   font-family: 'Lobster', cursive;
+   font-size: 5em;
+ }
+
+ .nav-logo {
+   font-family: 'Lobster', cursive;
+   font-size: 1.5em;
+ }
+
+.event-form {
+  top: -55px;
+}
+
+.vc {
+    margin-top: 50vh;
+    transform: translate(0, -50%);
+}
+
+ .home {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ .home-form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .home-logo {
+     background-color: rgba(255,255,255,0.85);
+     border-radius: 20px;
+     padding: 50px;
+ }
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.success {
+  color: #6fa234;
+}
+
+.error {
+  color: #e04438;
+}
+
+.field_with_errors {
+  border: 1px solid red;
+}
+
+.comment-head {
+  font-size: 1.2em;
+}

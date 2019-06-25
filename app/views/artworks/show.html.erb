@@ -1,0 +1,18 @@
+<div class="fill white-bg p-5">
+
+  <%= render "artworks/links", :artwork => @artwork %>
+
+  <% if @artwork.images.attached? %>
+    <ul>
+      <%= render :collection => @artwork.images, :partial => "artworks/image_li", :as => :image %>
+    </ul>
+  <% else %>
+    <p>No images submitted.</p>
+  <% end %>
+
+  <h1><%= @artwork.title %></h1>
+  <h3><%= @artwork.user.name %> - <%= @artwork.date.strftime("%B %Y") %></h3>
+
+  <p><%= simple_format(@artwork.description) %></p>
+  <p>Link: <%= link_to @artwork.url %></p>
+</div>
