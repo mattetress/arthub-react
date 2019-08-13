@@ -1,5 +1,6 @@
 # ArtHub
 
+This repository is arthub being rewritten with a react front end.
 ArtHub is a networking and event sharing platform for artists. Artists can sign up via email or Facebook OAuth. Artist profiles have portfolio functionality.
 
 ## Getting Started
