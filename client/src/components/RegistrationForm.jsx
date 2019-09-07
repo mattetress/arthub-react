@@ -8,7 +8,7 @@ export default const RegistrationForm = props => {
   return (
     <React.Fragment>
       <form onSubmit={props.handleSubmit}>
-
+        <input name="email" value={email} type="email" />
       </form>
 
     </React.Fragment>
